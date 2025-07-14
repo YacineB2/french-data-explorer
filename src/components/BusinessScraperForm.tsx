@@ -12,8 +12,6 @@ interface FormData {
   location: string;
   searchTerms: string;
   maxResults: string;
-  apifyToken: string;
-  sireneApiKey: string;
   fiberEligibility: string;
   nafCodes: string;
   legalForms: string;
@@ -30,8 +28,6 @@ export default function BusinessScraperForm() {
     location: "",
     searchTerms: "",
     maxResults: "100",
-    apifyToken: "",
-    sireneApiKey: "",
     fiberEligibility: "already-fiber",
     nafCodes: "",
     legalForms: "",
@@ -192,34 +188,6 @@ export default function BusinessScraperForm() {
                           <SelectItem value="500">500 entreprises</SelectItem>
                         </SelectContent>
                       </Select>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-foreground flex items-center gap-2 border-b border-border pb-2">
-                      🔑 Clés API
-                    </h3>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="apifyToken">Token Apify</Label>
-                      <Input
-                        id="apifyToken"
-                        type="password"
-                        placeholder="Votre token Apify"
-                        value={formData.apifyToken}
-                        onChange={(e) => handleInputChange('apifyToken', e.target.value)}
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="sireneApiKey">Clé API SIRENE</Label>
-                      <Input
-                        id="sireneApiKey"
-                        type="password"
-                        placeholder="Votre clé API SIRENE"
-                        value={formData.sireneApiKey}
-                        onChange={(e) => handleInputChange('sireneApiKey', e.target.value)}
-                      />
                     </div>
                   </div>
                 </div>
